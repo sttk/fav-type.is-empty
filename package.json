@@ -1,0 +1,53 @@
+{
+  "name": "fav-type.is-empty",
+  "version": "0.5.2",
+  "description": "Checks whether a value is empty or not.",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "lint": "eslint src test",
+    "test": "mocha",
+    "coverage": "nyc --reporter=lcov --reporter=text-summary npm test",
+    "coveralls": "nyc --reporter=text-lcov npm test | coveralls",
+    "web:build": "npm run web:build-src && npm run web:build-test",
+    "web:build-src": "browserify index.js --standalone fav.type.is-empty -o web/fav.type.is-empty.js && cd web && uglifyjs fav.type.is-empty.js --compress --mangle -o fav.type.is-empty.min.js --source-map url=fav.type.is-empty.min.js.map",
+    "web:build-test": "node tool/mktest.js",
+    "chrome:install": "npm i --no-save mocha-chrome",
+    "chrome:test": "mocha-chrome test/web/browser-test.html",
+    "phantom:install": "npm i --no-save phantomjs-prebuilt mocha-phantomjs",
+    "phantom:test": "mocha-phantomjs -p node_modules/.bin/phantomjs test/web/browser-test.html",
+    "build": "npm run lint && npm run coverage && npm run web:build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sttk/fav-type.is-empty.git"
+  },
+  "keywords": [
+    "empty",
+    "is-empty",
+    "type",
+    "datatype",
+    "fav"
+  ],
+  "author": "Takayuki Sato",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sttk/fav-type.is-empty/issues"
+  },
+  "homepage": "https://github.com/sttk/fav-type.is-empty#readme",
+  "dependencies": {
+    "@fav/type.is-array": "^0.6.0",
+    "@fav/type.is-plain-object": "^0.6.0"
+  },
+  "devDependencies": {
+    "browserify": "^14.4.0",
+    "coveralls": "^2.13.1",
+    "chai": "^3.5.0",
+    "eslint": "^4.8.0",
+    "mocha": "^3.5.3",
+    "nyc": "^11.2.1",
+    "uglify-js": "^3.1.3"
+  }
+}
