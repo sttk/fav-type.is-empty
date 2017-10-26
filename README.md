@@ -14,7 +14,7 @@ To install from npm:
 $ npm install --save @fav/type.is-empty
 ```
 
-***NOTE:*** *npm < 2.7.0 does not support scoped package, but even old version Node.js supports it. So when you use such older npm, you should download this package from [github.com][repo-url], and move it in `node_modules/@fav/type.is-empty/` direcotry manually.*
+***NOTE:*** *npm < 2.7.0 does not support scoped package, but even old version Node.js supports it. So when you use such older npm, you should download this package from [github.com][repo-url], and move it in `node_modules/@fav/type.is-empty/` directory manually.*
 
 
 ## Usage
@@ -63,7 +63,7 @@ Definition of "empty" is different by data type.
 * **HTMLCollection:** empty if it has no element.
 * <i>**others:**</i> always not empty.
 
-> This function always return false for other collections like Map, Set, typed-array and so on, because I think there are few needs to check them without knowing their data types. If data type of a collection is known, its own API to get size of itself should be used.
+> This function always returns false for other collections like Map, Set, typed-array and so on, because I think there are few needs to check them without knowing their data types. If data type of a collection is known, its own API to get size of itself should be used.
 
 #### Parameter:
 
@@ -82,7 +82,7 @@ True, if *value* is empty.
 
 Checks if *value* is not empty.
 
-This function returns a negative boolean of `isEmpty(value)`.
+This function always returns a negative boolean of `isEmpty(value)`.
 
 #### Parameter:
 
