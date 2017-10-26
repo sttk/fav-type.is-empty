@@ -43,6 +43,15 @@ function isEmpty(value) {
   return false;
 }
 
+function isNotEmpty(value) {
+  return !isEmpty(value);
+}
+
+Object.defineProperty(isEmpty, 'not', {
+  enumerable: true,
+  value: isNotEmpty,
+});
+
 module.exports = isEmpty;
 
 },{"@fav/type.is-array":2,"@fav/type.is-plain-object":3}],2:[function(require,module,exports){

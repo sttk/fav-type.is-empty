@@ -42,4 +42,13 @@ function isEmpty(value) {
   return false;
 }
 
+function isNotEmpty(value) {
+  return !isEmpty(value);
+}
+
+Object.defineProperty(isEmpty, 'not', {
+  enumerable: true,
+  value: isNotEmpty,
+});
+
 module.exports = isEmpty;

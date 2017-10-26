@@ -26,9 +26,13 @@ var isEmpty = require('@fav/type.is-empty');
 
 isEmpty([]); // => true
 isEmpty(['a']); // => false
+isEmpty.not([]); // => false
+isEmpty.not(['a']); // => true
 
 isEmpty({}); // => true
 isEmpty({ a: 1 }); // => false
+isEmpty.not({}); // => false
+isEmpty.not({ a: 1 }); // => true
 ```
 
 For Web browsers:
@@ -38,6 +42,7 @@ For Web browsers:
 <script>
 var isEmpty = fav.type.isEmpty;
 isEmpty([]); // => true
+isEmpty.not([]); // => false
 </script>
 ```
 
@@ -69,6 +74,25 @@ Definition of "empty" is different by data type.
 #### Return:
 
 True, if *value* is empty.
+
+**Type:** boolean
+
+
+### <u>isEmpty.not(value) : boolean</u>
+
+Checks if *value* is not empty.
+
+This function returns a negative boolean of `isEmpty(value)`.
+
+#### Parameter:
+
+| Parameter |  Type  | Description             |
+|-----------|:------:|-------------------------|
+| value     | *any*  | The value to be checked |
+
+#### Return:
+
+True, if *value* is not empty.
 
 **Type:** boolean
 
