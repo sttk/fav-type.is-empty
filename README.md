@@ -19,7 +19,7 @@ $ npm install --save @fav/type.is-empty
 
 ## Usage
 
-For Node.js, when installing `@fav/type.is-empty` from npm:
+For Node.js:
 
 ```js
 var isEmpty = require('@fav/type.is-empty');
