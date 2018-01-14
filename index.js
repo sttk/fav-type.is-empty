@@ -23,7 +23,7 @@ function isEmpty(value) {
   switch (typeof HTMLCollection) {
     case 'object': // PhantomJS
     case 'function': {
-      if(value instanceof HTMLCollection) {
+      if (value instanceof HTMLCollection) {
         return value.length === 0;
       }
     }
