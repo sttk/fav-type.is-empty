@@ -24,7 +24,7 @@ function isEmpty(value) {
   switch (typeof HTMLCollection) {
     case 'object': // PhantomJS
     case 'function': {
-      if(value instanceof HTMLCollection) {
+      if (value instanceof HTMLCollection) {
         return value.length === 0;
       }
     }
@@ -61,6 +61,15 @@ function isArray(value) {
   return Array.isArray(value);
 }
 
+function isNotArray(value) {
+  return !Array.isArray(value);
+}
+
+Object.defineProperty(isArray, 'not', {
+  enumerable: true,
+  value: isNotArray,
+});
+
 module.exports = isArray;
 
 },{}],3:[function(require,module,exports){
@@ -87,6 +96,15 @@ function isPlainObject(value) {
     }
   }
 }
+
+function isNotPlainObject(value) {
+  return !isPlainObject(value);
+}
+
+Object.defineProperty(isPlainObject, 'not', {
+  enumerable: true,
+  value: isNotPlainObject,
+});
 
 module.exports = isPlainObject;
 
