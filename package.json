@@ -39,12 +39,12 @@
   },
   "homepage": "https://github.com/sttk/fav-type.is-empty#readme",
   "dependencies": {
-    "@fav/type.is-array": "^1.0.0",
-    "@fav/type.is-plain-object": "^1.0.0"
+    "@fav/type.is-array": "^1.0.1",
+    "@fav/type.is-plain-object": "^1.0.1"
   },
   "devDependencies": {
-    "browserify": "^14.4.0",
-    "coveralls": "^2.13.1",
+    "browserify": "^16.1.0",
+    "coveralls": "^3.0.0",
     "chai": "^3.5.0",
     "eslint": "^4.8.0",
     "mocha": "^3.5.3",
