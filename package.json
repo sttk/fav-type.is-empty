@@ -1,6 +1,6 @@
 {
   "name": "@fav/type.is-empty",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Checks whether a value is empty or not.",
   "main": "index.js",
   "files": [
